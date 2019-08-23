@@ -31,22 +31,10 @@
 
 
 -Leankid
-		*Crear Board de Scrum
+		*Crear Board de Scrum<<
 		*Crear Backlog
 
 
 
 -OTROS: 
-		*Documentacion
-		*
-
-
-
-
-
-
-
-MB: THLF
-JN: HIB
-AD:
-DA: DOC
+		*Documentacion general y personal.

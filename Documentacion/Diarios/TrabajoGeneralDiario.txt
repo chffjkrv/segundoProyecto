@@ -1,0 +1,41 @@
+VIERNES 23/08/2019:
+----------------------------|
+
+Mohibul: Pruebas con Tymeleaf 
+Juan: Pruebas con Hibernate
+Adri: Pruebas con SpringBoot	
+Dani: Creacion de Documentacion, Cuenta y Board de Leankid, Repositorio Git, Pruebas con html.
+
+
+LUNES 26/08/2019:
+----------------------------|
+
+
+
+
+MARTES 27/08/2019:
+----------------------------|
+
+
+
+
+
+
+MIERCOLES 28/08/2019:
+-------------------------------|
+
+
+
+
+
+
+JUEVES 29/08/2019:
+----------------------------|
+
+
+
+
+
+
+VIERNES 30/08/2019:
+----------------------------|
