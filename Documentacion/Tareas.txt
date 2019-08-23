@@ -1,0 +1,52 @@
+-Thymeleaf
+
+
+
+-Spring boot 
+
+
+
+-Git:	
+		*Crear repositorio<<
+
+
+
+-Hibernate.
+
+
+
+-Mysql:
+		*Crear BDq en WorkBench
+		*Crear tablas de BD
+
+
+-HTML:	
+		*Probar a montar 5 paginas y poder navegar entre ellas.
+
+
+
+-Css:
+
+
+
+
+-Leankid
+		*Crear Board de Scrum
+		*Crear Backlog
+
+
+
+-OTROS: 
+		*Documentacion
+		*
+
+
+
+
+
+
+
+MB: THLF
+JN: HIB
+AD:
+DA: DOC
