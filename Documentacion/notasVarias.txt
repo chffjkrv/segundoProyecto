@@ -1,0 +1,15 @@
+-ejercicio prueba con creacion de BD, y extraccion de documentos con hibernate.
+-Practicar @Autowired.
+
+Tablas: PERFIL, MATERIAS, CONTACTOS, DESCARTES, MATCH
+
+
+
+BACKLOG: TODAS LAS TAREAS, SI HAY 100 SE PONEN LAS 100
+
+
+
+
+1ºSprint MVC: MARTES/JUEVES
+2ºSprint MVC+Rest: VIERNES/MARTES
+3ºSprint MVC+Rest+Angular: MIERCOLES/JUEVES

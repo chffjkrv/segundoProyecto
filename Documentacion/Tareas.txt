@@ -36,5 +36,16 @@
 
 
 
+-JUnit:
+		*Investigar mockito
+		
+		
+
+-SWAGGER:
+		*Crear doc de API.
+
+		
+		
 -OTROS: 
 		*Documentacion general y personal.
+		*Generar doble tarea en backlog para rest/angular.
