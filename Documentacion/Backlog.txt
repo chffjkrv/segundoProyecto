@@ -37,55 +37,53 @@ Tareas generales :
 	Logger info en métodos
 
 *1ºD:
-	-Generar HTML de la página principal "PagLogin".
-	-Generar CSS para PagLogin.
-	-Generar tabla usuarios.
-	-Generar clase Usuarios.
-	-Generar UsuarioController
-	-Generar UsuarioDAO con JPArepository
-	-Generar UsuarioDomain
-	-Generar UsuarioServiceiNTERFACE
-	-Generar UsuarioServiceImplement
+	1.1-Generar HTML de la página principal "PagLogin".
+	1.2-Generar CSS para PagLogin.
+	1.3-Generar tabla usuarios.
+	1.4-Generar clase Usuarios.
+	1.5-Generar UsuarioController
+	1.6-Generar UsuarioDAO con JPArepository
+	1.7-Generar UsuarioDomain
+	1.8-Generar UsuarioServiceiNTERFACE
+	1.9-Generar UsuarioServiceImplement
 	
 *3ºD:
-	-Generar Html con formulario para crear usuario. (PagPerfil).html
-	-Generar Css de crear usuario.
-	-Completar UsuarioServiceImplement con las querys de alta usuario.
+	3.1-Generar Html con formulario para crear usuario. (PagPerfil).html
+	3.2-Generar Css de crear usuario.
+	3.3-Completar UsuarioServiceImplement con las querys de alta usuario.
 	
 *6ºA: Mostrar 20 perfiles(simple)
-	-Crear vista de inicio(HTML,CSS) PagListados.html
-	-controller:  método String mostrarPerfiles(Model model, return view en html
-	-Método en servicios public List<Usuario> generarPerfiles() que llame a repository(generaPerfilesRepo)
-	-Método en repository(generarPerfilesRepo)
-	-mostrar perfiles en view de Thymeleaf
+	6.1-Crear vista de inicio(HTML,CSS) PagListados.html
+	6.2-controller:  método String mostrarPerfiles(Model model, return view en html
+	6.3-Método en servicios public List<Usuario> generarPerfiles() que llame a repository(generaPerfilesRepo)
+	6.4-Método en repository(generarPerfilesRepo)
+	6.5-mostrar perfiles en view de Thymeleaf
 
 *8ºA:
-	-Dar opción de dar like
-	-en controller  método darLike(int idUsuario) 
-	-Crear método en servicios darLike(int idUsuario)
-	-Crear método en repositorydarLikeRepo (int idUsuario)
-	-Implementar dar like en Thymleaf
-	-
+	8.1-Dar opción de dar like
+	8.2-en controller  método darLike(int idUsuario) 
+	8.3-Crear método en servicios darLike(int idUsuario)
+	8.4-Crear método en repositorydarLikeRepo (int idUsuario)
+	8.5-Implementar dar like en Thymleaf
+	
 
-*9ºJ. Dar Opcion de dar dislike
-    --Prioridad 1--
+*9ºJ:
     9.1. Crear tabla "descartes"
+    9.2- Crear metodo darDislike(int idUsuario, Model model):String en controlador
+    9.3- Crear metodo darDislike(int idUsuario):void en servicios
+    9.4- Crear metodo darDislike(int idUsuario):void en datos
     
-    9.3. Crear metodo darDislike(int idUsuario, Model model):String en controlador
-    9.4. Crear metodo darDislike(int idUsuario):void en servicios
-    9.5. Crear metodo darDislike(int idUsuario):void en datos
-    
-*10.1ºJ. Mostrar likes
-    --Prioridad 1--
-    10.1.1. Crear metodo mostrarContactos(Model model):String en controlador
-    10.1.2. Crear metodo mostrarContactos(int idUsuario):List<Usuario> en servicios
-    10.1.3. Crear metodo mostrarContactos(int idUsuario):List<Usuario> en datos
+*10ºJ:
+
+    10.1- Crear metodo mostrarContactos(Model model):String en controlador
+    10.2- Crear metodo mostrarContactos(int idUsuario):List<Usuario> en servicios
+    10.3- Crear metodo mostrarContactos(int idUsuario):List<Usuario> en datos
 
 *11ºM:
-	-Generar Abstract: escribir un texto de unos 15 lineas sobre el proyecto en INGLÉS
+	11.1-Generar Abstract: escribir un texto de unos 15 lineas sobre el proyecto en INGLÉS
 
 *16ºM:
-	-Generar algoritmo de seleccion simple: crear método SeleccionSimple con parámetro de entrada tipo String genero, 
+	16.1-Generar algoritmo de seleccion simple: crear método SeleccionSimple con parámetro de entrada tipo String genero, 
 	que devuelve un array de obejos con dicho parámetro.
 	
 	
