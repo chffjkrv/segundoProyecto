@@ -4,19 +4,23 @@
 package com.grupo2.proyecto2.controlador;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.grupo2.proyecto2.modelo.Usuario;
 import com.grupo2.proyecto2.servicios.IServicios;
+
 
 
 
@@ -35,21 +39,23 @@ public class UsuarioControlador {
 	IServicios service;
 	private static final Logger logger = LoggerFactory.getLogger(UsuarioControlador.class);
 	
+
+	
+	  @RequestMapping(value = "/", method = RequestMethod.GET)
+	  
+	  public String initForm(@ModelAttribute("usuario") Usuario usuario) {
+
+	      return "PagLogin";
+	  }	
+	  
 	@GetMapping(value="/listados")
 	public String listarPerfiles(ModelMap model) {
 		service.generaUsuarioRandomService();
 		List<Usuario> perfiles = service.listarPerfilesService();
-		model.addAttribute("perfiles", perfiles);
+		model.addAttribute("perfiles", perfiles); //model.addAttribute("Usuario",usuario)
 		return "";
 	}
-	
-	
-	  @RequestMapping(value = "/", method = RequestMethod.GET)
-	  
-	  public String initForm(@ModelAttribute("Usuario") Usuario Usuario) {
-
-	      return "PagLogin2";
-	  }	
+		  
 	  
 	  @RequestMapping(value = "/addUsuario", method = RequestMethod.POST)
 	  public String processSubmit(
@@ -59,6 +65,19 @@ public class UsuarioControlador {
 	      return "PagPerfil";
 	  }
 	  
+	  
+		@RequestMapping(path = {"/login", "/login/{idUsuario}"})
+		public String editEmployeeById(Model model, @PathVariable("idUsuario") Optional<Integer> idUsuario) 
+		{
+			if (idUsuario.isPresent()) {
+				Usuario entity = service.geUsuarioById(idUsuario.get());
+				model.addAttribute("usuario", entity);
+				return "PagListado";
+			} else {
+				return "redirect:/";
+			}
+
+		}
 //	  @GetMapping(value="/random")
 //		public  String newRandom(ModelMap model) {
 //			

@@ -6,10 +6,12 @@ import java.util.Locale;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jca.cci.RecordTypeNotSupportedException;
 
 import com.github.javafaker.Faker;
 import com.grupo2.proyecto2.modelo.Usuario;
 import com.grupo2.proyecto2.repositorio.IUsuarioRepositorio;
+
 
 /**
  * Clase Servicios: incluye todos los metodos para interactuar con el repositorio
@@ -95,6 +97,18 @@ public List<Usuario> listarPerfilesService() {
 	
 	
 } 
+}
+public Usuario geUsuarioById(Integer idUsuario)
+{
+	Optional<Usuario> UsuarioconId = repositorio.findById(idUsuario);
+	
+	if(UsuarioconId.isPresent()) {
+		return repositorio.getOne(idUsuario);
+	} else {
+		System.out.println("NO EXISTE ESTE ID");
+		return null;
+
+	}
 }
 }
 	
