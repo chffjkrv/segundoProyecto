@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jca.cci.RecordTypeNotSupportedException;
+import org.springframework.stereotype.Service;
 
 import com.github.javafaker.Faker;
 import com.grupo2.proyecto2.modelo.Usuario;
@@ -19,7 +20,7 @@ import com.grupo2.proyecto2.repositorio.IUsuarioRepositorio;
  * @version 1.0
  * @since 27-08-2019
  */
-
+@Service
 public class Servicios implements IServicios {
 	
 @Autowired

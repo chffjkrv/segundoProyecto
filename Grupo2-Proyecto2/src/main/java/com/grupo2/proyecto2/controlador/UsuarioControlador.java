@@ -35,8 +35,9 @@ import com.grupo2.proyecto2.servicios.IServicios;
 @RequestMapping("/")
 
 public class UsuarioControlador {
-	@Autowired
+	@Autowired	
 	IServicios service;
+
 	private static final Logger logger = LoggerFactory.getLogger(UsuarioControlador.class);
 	
 

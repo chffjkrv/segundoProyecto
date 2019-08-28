@@ -15,15 +15,17 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="perfiles")
+@Table(name="usuarios")
 public class Usuario {
 	
-	
+	public Usuario() {
+		super();
+	}
 	
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name="idUsuario")
-private int id;
+private Integer idUsuario;
 	    
 @Column(name="nombre")
 private String nombre;
@@ -39,11 +41,11 @@ private String descripcion;
 
 
 public Integer getId() {
-	return id;
+	return idUsuario;
 }
 
-public void setId(Integer id) {
-	this.id = id;
+public void setId(Integer idUsuario) {
+	this.idUsuario = idUsuario;
 }
 
 public String getNombre() {
@@ -80,7 +82,7 @@ public void setDescripcion(String descripcion) {
 
 @Override
 public String toString() {
-	return "Usuario [id=" + id + ", nombre=" + nombre + ", genero=" + genero + ", edad=" + edad + ", descripcion="
+	return "Usuario [idUsuario=" + idUsuario + ", nombre=" + nombre + ", genero=" + genero + ", edad=" + edad + ", descripcion="
 			+ descripcion + "]";
 }
 
