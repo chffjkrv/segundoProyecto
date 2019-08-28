@@ -19,7 +19,15 @@
 				th:action="@{/login}">
 			<table>
 				<tr>
+<<<<<<< HEAD
 					<td><label for="nombre">Id del usuario:</label></td>
+=======
+					<td><label for="id">Id del usuario:</label></td>
+					<td><input type="text" th:field="*{id}" /></td>
+				</tr>
+				<!--<tr>
+					<td><label for="id">Nombre Usuario</label></td>
+>>>>>>> 52be394d586ad764e4b9efcf4c3be3553baa1dfb
 					<td><input type="text" th:field="*{id}" /></td>
 				</tr>
 			</table>
@@ -28,7 +36,12 @@
 				<input type="submit" value="Login" />
 			</p>
 		</form>
-		
+      <form method="post" th:objet="${usuario}" th:action="@{/addUsuario}">
+          <input type="submit" value="Registrar">
+      </form>       
 	</div>
 </body>
+<script>
+    
+    </script>
 </html>
