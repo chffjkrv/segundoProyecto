@@ -33,7 +33,7 @@ public Usuario crearoEditarUsuarioService(Usuario usu) {
 
 	
 	
-		if(usu.getId()  == null) 
+		if(usu.getid()  == null) 
 		{
 			usu = repositorio.save(usu);
 			
@@ -41,7 +41,7 @@ public Usuario crearoEditarUsuarioService(Usuario usu) {
 		} 
 		else 
 		{
-			Optional<Usuario> employee = repositorio.findById(usu.getId());
+			Optional<Usuario> employee = repositorio.findById(usu.getid());
 			
 			if(employee.isPresent()) 
 			{
@@ -99,12 +99,11 @@ public List<Usuario> listarPerfilesService() {
 	
 } 
 }
-public Usuario geUsuarioById(Integer idUsuario)
+public Usuario geUsuarioById(Integer id)
 {
-	Optional<Usuario> UsuarioconId = repositorio.findById(idUsuario);
-	
-	if(UsuarioconId.isPresent()) {
-		return repositorio.getOne(idUsuario);
+	if(repositorio.getOne(id) != null) {
+		
+      return repositorio.getOne(id);
 	} else {
 		System.out.println("NO EXISTE ESTE ID");
 		return null;

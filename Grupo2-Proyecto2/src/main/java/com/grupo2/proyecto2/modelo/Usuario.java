@@ -24,28 +24,28 @@ public class Usuario {
 	
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="idUsuario")
-private Integer idUsuario;
+@Column
+private Integer id;
 	    
-@Column(name="nombre")
+@Column
 private String nombre;
 	    
-@Column(name="genero")
+@Column
 private String genero;
 	    
-@Column(name="edad")
+@Column
 private int edad;
 
-@Column(name="descripcion")
+@Column
 private String descripcion;
 
 
-public Integer getId() {
-	return idUsuario;
+public Integer getid() {
+	return id;
 }
 
-public void setId(Integer idUsuario) {
-	this.idUsuario = idUsuario;
+public void setid(Integer id) {
+	this.id = id;
 }
 
 public String getNombre() {
@@ -82,7 +82,7 @@ public void setDescripcion(String descripcion) {
 
 @Override
 public String toString() {
-	return "Usuario [idUsuario=" + idUsuario + ", nombre=" + nombre + ", genero=" + genero + ", edad=" + edad + ", descripcion="
+	return "Usuario [id=" + id + ", nombre=" + nombre + ", genero=" + genero + ", edad=" + edad + ", descripcion="
 			+ descripcion + "]";
 }
 

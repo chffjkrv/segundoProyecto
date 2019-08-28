@@ -24,6 +24,7 @@ import com.grupo2.proyecto2.servicios.IServicios;
 
 
 
+
 /**
  * Clase UsuarioControlador: controlador de las paginas
  * @author Grupo 2
@@ -45,15 +46,15 @@ public class UsuarioControlador {
 	  @RequestMapping(value = "/", method = RequestMethod.GET)
 	  
 	  public String initForm(@ModelAttribute("usuario") Usuario usuario) {
-
+		 
 	      return "PagLogin";
 	  }	
 	  
 	@GetMapping(value="/listados")
 	public String listarPerfiles(ModelMap model) {
 		service.generaUsuarioRandomService();
-		List<Usuario> perfiles = service.listarPerfilesService();
-		model.addAttribute("perfiles", perfiles); //model.addAttribute("Usuario",usuario)
+		List<Usuario> usuario = service.listarPerfilesService();
+		model.addAttribute("usuarios", usuario); //model.addAttribute("Usuario",usuario)
 		return "";
 	}
 		  
@@ -67,16 +68,16 @@ public class UsuarioControlador {
 	  }
 	  
 	  
-		@RequestMapping(path = {"/login", "/login/{idUsuario}"})
-		public String editEmployeeById(Model model, @PathVariable("idUsuario") Optional<Integer> idUsuario) 
+		@RequestMapping(path =  "/login")
+		public String encontrarUsuarioById(
+		          @ModelAttribute("usuario") Usuario usuario,
+		          ModelMap model) 
 		{
-			if (idUsuario.isPresent()) {
-				Usuario entity = service.geUsuarioById(idUsuario.get());
-				model.addAttribute("usuario", entity);
+			System.out.println(usuario.getid());
+			usuario = service.geUsuarioById(usuario.getid());
+			System.out.println(usuario);
 				return "PagListado";
-			} else {
-				return "redirect:/";
-			}
+			
 
 		}
 //	  @GetMapping(value="/random")
