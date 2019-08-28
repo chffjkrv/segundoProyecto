@@ -75,7 +75,7 @@ public void generaUsuarioRandomService() {
 		rnd.setNombre(faker.name().firstName());
 		rnd.setGenero(faker.demographic().sex());
 		rnd.setEdad(faker.number().numberBetween(12, 90));
-		rnd.setDescripcion(faker.yoda().quote());
+		rnd.setDescripcion(faker.dog().memePhrase());
 		crearoEditarUsuarioService(rnd);
 		
 		

@@ -15,6 +15,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -50,12 +51,13 @@ public class UsuarioControlador {
 	      return "PagLogin";
 	  }	
 	  
-	@GetMapping(value="/listados")
-	public String listarPerfiles(ModelMap model) {
+	@PostMapping(value="/listados")
+	public String listarPerfiles(ModelMap model,Usuario usuario) {
+		service.crearoEditarUsuarioService(usuario);
 		service.generaUsuarioRandomService();
-		List<Usuario> usuario = service.listarPerfilesService();
-		model.addAttribute("usuarios", usuario); //model.addAttribute("Usuario",usuario)
-		return "";
+		List<Usuario> usu = service.listarPerfilesService();
+		model.addAttribute("usuarios", usu); //model.addAttribute("Usuario",usuario)
+		return "PagListado";
 	}
 		  
 	  

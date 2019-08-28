@@ -34,7 +34,7 @@ private String nombre;
 private String genero;
 	    
 @Column
-private int edad;
+private Integer edad;
 
 @Column
 private String descripcion;
@@ -64,11 +64,11 @@ public void setGenero(String genero) {
 	this.genero = genero;
 }
 
-public int getEdad() {
+public Integer getEdad() {
 	return edad;
 }
 
-public void setEdad(int edad) {
+public void setEdad(Integer edad) {
 	this.edad = edad;
 }
 
