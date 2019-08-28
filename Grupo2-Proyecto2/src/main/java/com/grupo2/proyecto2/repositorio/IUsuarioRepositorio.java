@@ -8,5 +8,8 @@ import com.grupo2.proyecto2.modelo.Usuario;
 
 
 @Repository
-public interface IUsuarioRepositorio extends JpaRepository<Usuario, Integer>{}
+public interface IUsuarioRepositorio extends JpaRepository<Usuario, Integer>,IUsuarioRepositorioCustom{
+	
+	
+}
 

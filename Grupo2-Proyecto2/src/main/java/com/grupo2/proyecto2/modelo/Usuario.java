@@ -23,7 +23,7 @@ public class Usuario {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name="idUsuario")
-private Long id;
+private int id;
 	    
 @Column(name="nombre")
 private String nombre;
@@ -38,11 +38,11 @@ private int edad;
 private String descripcion;
 
 
-public Long getId() {
+public Integer getId() {
 	return id;
 }
 
-public void setId(Long id) {
+public void setId(Integer id) {
 	this.id = id;
 }
 

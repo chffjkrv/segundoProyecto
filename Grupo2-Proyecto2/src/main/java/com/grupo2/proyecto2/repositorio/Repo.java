@@ -7,6 +7,6 @@ package com.grupo2.proyecto2.repositorio;
  * @version 1.0
  */
 
-public class Repo implements IRepo {
+public class Repo implements IUsuarioRepositorioCustom {
 
 }

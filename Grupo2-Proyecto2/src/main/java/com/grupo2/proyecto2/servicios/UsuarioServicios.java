@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.grupo2.proyecto2.repositorio.IUsuarioRepositorio;
 
 @Service
-public class UsuarioServicios {
+public class UsuarioServicios implements IServicios{
 	
 	@Autowired
 	IUsuarioRepositorio repositorio;
