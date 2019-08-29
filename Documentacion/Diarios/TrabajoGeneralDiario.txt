@@ -19,17 +19,17 @@ Dani: Documentacion I+D Jpa y BBDDD, JHipster, Leankit.
 MARTES 27/08/2019:
 ----------------------------|
 
-
-
-
+Comienzo del proyecto, hemos planeado el Backlog y el primer Sprint. Todas las tareas de los mismos han sido pasadas a Leankit y se han asignado las primeras tareas.
+Montaje de los esqueletos necesarios para el proyecto (Poryecto de SpringBoot en Eclipse y BBDDD vacía en Workbench)
+Diseño de clase controlador y servicios.
 
 
 MIERCOLES 28/08/2019:
 -------------------------------|
 
-
-
-
+Creacíon de los html "PagLog" y "PagPerfil"
+Complementacion de clase control y servicios.
+Primeras pruebas de funcionalidades básicas como conexión de BBDDD con el código y flujo correcto en el front.
 
 
 JUEVES 29/08/2019:

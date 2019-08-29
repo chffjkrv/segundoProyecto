@@ -27,7 +27,7 @@ import com.grupo2.proyecto2.servicios.IServicios;
 
 
 /**
- * Clase UsuarioControlador: controlador de las paginas
+ * Clase UsuarioControlador. controlador de las paginas
  * @author Grupo 2
  * @since 27-08-2019
  * @version 1.0
@@ -56,7 +56,7 @@ public class UsuarioControlador {
 		service.crearoEditarUsuarioService(usuario);
 		service.generaUsuarioRandomService();
 		List<Usuario> usu = service.listarPerfilesService();
-		model.addAttribute("usuarios", usu); //model.addAttribute("Usuario",usuario)
+		model.addAttribute("usuarios", usu); 
 		return "PagListado";
 	}
 		  
