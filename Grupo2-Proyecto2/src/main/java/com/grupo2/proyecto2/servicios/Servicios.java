@@ -6,9 +6,9 @@ import java.util.Locale;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jca.cci.RecordTypeNotSupportedException;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.deser.DataFormatReaders.Match;
 import com.github.javafaker.Faker;
 import com.grupo2.proyecto2.modelo.Usuario;
 import com.grupo2.proyecto2.repositorio.IUsuarioRepositorio;
@@ -41,11 +41,11 @@ public Usuario crearoEditarUsuarioService(Usuario usu) {
 		} 
 		else 
 		{
-			Optional<Usuario> employee = repositorio.findById(usu.getid());
+			Optional<Usuario> usuario = repositorio.findById(usu.getid());
 			
-			if(employee.isPresent()) 
+			if(usuario.isPresent()) 
 			{
-				Usuario newUser = employee.get();
+				Usuario newUser = usuario.get();
 				newUser.setNombre(usu.getNombre());
 				newUser.setGenero(usu.getGenero());
 				newUser.setEdad(usu.getEdad());
@@ -99,8 +99,7 @@ public List<Usuario> listarPerfilesService() {
 	
 } 
 }
-public Usuario geUsuarioById(Integer id)
-{
+public Usuario geUsuarioById(Integer id){
 	if(repositorio.getOne(id) != null) {
 		
       return repositorio.getOne(id);
@@ -110,6 +109,44 @@ public Usuario geUsuarioById(Integer id)
 
 	}
 }
+
+
+
+@Override
+public void crearContactoService(int idusuario1, int idusuario2) {
+	
+		Contacto contacto = New Contacto();
+		contacto.setidusuario1i(id1);
+		contacto.setidusuario2(id2);
+		repositorio.save(contacto);
+		
+			}
+
+
+
+
+
+
+
+@Override
+public void crearDescarteService(int idusuario1, int idusuario2) {
+	Descarte descarte = New Descarte();
+	descarte.setidusuario1i(idusuario1);
+	descarte.setidusuario2(idusuario2);
+	repositorio.save(descarte);
+}
+
+
+
+@Override
+public void crearMatchService(int idusuario1, int idusuario2) {
+	
+	Match match = New Match();
+	match.setidusuario1i(idusuario1);
+	match.setidusuario2(idusuario2);
+	repositorio.save(match);
+}
+	
 }
 	
 

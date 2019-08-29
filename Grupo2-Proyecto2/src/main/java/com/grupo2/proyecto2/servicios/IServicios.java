@@ -1,7 +1,6 @@
 package com.grupo2.proyecto2.servicios;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.jca.cci.RecordTypeNotSupportedException;
 import org.springframework.stereotype.Service;
@@ -19,5 +18,10 @@ public interface IServicios {
 	public List<Usuario> listarPerfilesService();
 	
 	public Usuario geUsuarioById(Integer id) throws RecordTypeNotSupportedException;
-
+	
+	public public void crearContactoService(int idusuario1,int idusuario2);
+	
+	public void crearDescarteService(int idusuario1,int idusuario2);
+	
+	public void crearMatchService(int idusuario1, int idusuario2);
 }
