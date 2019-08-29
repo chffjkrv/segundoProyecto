@@ -19,5 +19,7 @@ public interface IServicios {
 	public List<Usuario> listarPerfilesService();
 	
 	public Usuario geUsuarioById(Integer id) throws RecordTypeNotSupportedException;
+	
+	public void darLike(Integer idusuario1, Integer idusuario2);
 
 }

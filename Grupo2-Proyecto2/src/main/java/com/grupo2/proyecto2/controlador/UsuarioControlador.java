@@ -82,6 +82,31 @@ public class UsuarioControlador {
 			
 
 		}
+		
+		
+		@RequestMapping(path="/darlike")
+		public void darLike(
+		          @ModelAttribute("usuario") Usuario usuario, @ModelAttribute("usuario2") Usuario usuario2,
+		          ModelMap model) {
+			
+			service.darLike(usuario.getid(), usuario2.getid());
+			
+	
+		}
+		
+		@RequestMapping(path="/contactos")
+		public String contacto(
+				@ModelAttribute("usuario") Usuario usuario, ModelMap model) {
+			
+			service
+			
+			return "Listado";
+		}
+		
+		
+		
+		
+		
 //	  @GetMapping(value="/random")
 //		public  String newRandom(ModelMap model) {
 //			

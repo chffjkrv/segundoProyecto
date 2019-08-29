@@ -110,6 +110,17 @@ public Usuario geUsuarioById(Integer id)
 
 	}
 }
+
+
+	public void darLike(Integer idusuario1,Integer idusuario2) {
+		
+		
+		
+		
+	}
+
+
+
 }
 	
 
