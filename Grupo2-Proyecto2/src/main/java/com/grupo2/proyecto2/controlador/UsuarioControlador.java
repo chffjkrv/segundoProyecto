@@ -27,11 +27,11 @@ import com.grupo2.proyecto2.servicios.IServicios;
 
 
 /**
- * Clase UsuarioControlador. controlador de las paginas
- * @author Grupo 2
- * @since 27-08-2019
+ * Nombre de clase. UsuarioControlador.
+ * Descripcion. Capa encargada de gestionar el flujo del front en html.
  * @version 1.0
- *
+ * @author grupo2
+ * @since 27-08-2019
  */
 @Controller
 @RequestMapping("/")
