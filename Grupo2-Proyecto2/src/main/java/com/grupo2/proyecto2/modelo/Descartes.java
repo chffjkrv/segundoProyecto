@@ -4,7 +4,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
+/**
+ * Nombre de clase. Descartes. 
+ * Descripcion. Objeto modelo de Descartes el cual usaremos con JPA par insertar y extraer datos.
+ * @version 1.0
+ * @author grupo2
+ * @since 27-08-2019
+ */
 
 @Entity
 @Table(name="descartes")
@@ -45,13 +51,5 @@ public class Descartes {
 	@Override
 	public String toString() {
 		return "Descartes [idusuario1=" + idusuario1 + ", idusuario2=" + idusuario2 + "]";
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

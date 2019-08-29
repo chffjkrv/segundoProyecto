@@ -4,7 +4,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
+/**
+ * Nombre de clase. Matches.
+ * Descripcion. Objeto modelo de Matches.
+ * @version 1.0
+ * @author grupo2
+ * @since 29-08-2019
+ */
 
 @Entity
 @Table(name="matches")
