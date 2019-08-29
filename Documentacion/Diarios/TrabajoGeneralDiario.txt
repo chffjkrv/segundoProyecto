@@ -22,6 +22,8 @@ MARTES 27/08/2019:
 Comienzo del proyecto, hemos planeado el Backlog y el primer Sprint. Todas las tareas de los mismos han sido pasadas a Leankit y se han asignado las primeras tareas.
 Montaje de los esqueletos necesarios para el proyecto (Poryecto de SpringBoot en Eclipse y BBDDD vacía en Workbench)
 Diseño de clase controlador y servicios.
+Se han creado las interfaces de Servicios y Repositorio.
+Creación de estilos.css
 
 
 MIERCOLES 28/08/2019:
@@ -29,6 +31,7 @@ MIERCOLES 28/08/2019:
 
 Creacíon de los html "PagLog" y "PagPerfil"
 Complementacion de clase control y servicios.
+Creación de la tabla usuarios en la BBDDD e inserción de perfiles en la misma mediante el metodo que implementa el proyecto JavaFAKER.
 Primeras pruebas de funcionalidades básicas como conexión de BBDDD con el código y flujo correcto en el front.
 
 
