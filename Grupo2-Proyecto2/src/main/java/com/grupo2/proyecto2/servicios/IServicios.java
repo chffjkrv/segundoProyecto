@@ -19,7 +19,7 @@ public interface IServicios {
 	
 	public Usuario geUsuarioById(Integer id) throws RecordTypeNotSupportedException;
 	
-	public public void crearContactoService(int idusuario1,int idusuario2);
+	public void crearContactoService(int idusuario1,int idusuario2);
 	
 	public void crearDescarteService(int idusuario1,int idusuario2);
 	

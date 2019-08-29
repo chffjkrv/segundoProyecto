@@ -8,11 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Clase Usuario: modelo de la clase usurio con sus atributos
- * @author Grupo2
+ * Nombre de clase. Usuario.
+ * Descripcion. Objeto modelo de usuario.
  * @version 1.0
+ * @author grupo2
  * @since 27-08-2019
- *
  */
 @Entity
 @Table(name="usuarios")

@@ -1,8 +1,0 @@
--Ir a leankit y asignar a persona y mover tarea
--DOCUMENTACION PERSONAL
--Javadoc clase: Nombre de clase, descripcion, fecha, version y autor.
--logger.info
--Crear constructor vacio.
--Hacer setters, getters y toString de los metodos.
--Revisar y formatear el codigo.
--Pasar el posit a tareas finalizadas, maravilloso, felicidades, un pin pa ti.

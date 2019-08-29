@@ -1,0 +1,51 @@
+-Thymeleaf
+
+
+
+-Spring boot 
+
+
+
+-Git:	
+		*Crear repositorio<<
+
+
+
+-Hibernate.
+
+
+
+-Mysql:
+		*Crear BDq en WorkBench
+		*Crear tablas de BD
+
+
+-HTML:	
+		*Probar a montar 5 paginas y poder navegar entre ellas.
+
+
+
+-Css:
+
+
+
+
+-Leankid
+		*Crear Board de Scrum<<
+		*Crear Backlog
+
+
+
+-JUnit:
+		*Investigar mockito
+		
+		
+
+-SWAGGER:
+		*Crear doc de API.
+
+		
+		
+-OTROS: 
+		*Documentacion general y personal.
+		*Generar doble tarea en backlog para rest/angular.

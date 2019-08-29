@@ -1,0 +1,5 @@
+Nombre de clase: *Nombre de clase
+Descripcion: *Descripcion
+Fecha: *Fecha
+Versión: @version
+Autor: @autor

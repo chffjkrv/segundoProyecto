@@ -110,8 +110,6 @@ public Usuario geUsuarioById(Integer id){
 	}
 }
 
-
-
 @Override
 public void crearContactoService(int idusuario1, int idusuario2) {
 	
