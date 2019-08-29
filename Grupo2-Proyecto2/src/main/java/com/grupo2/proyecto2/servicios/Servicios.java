@@ -85,8 +85,6 @@ public void generaUsuarioRandomService() {
 	
 }
 
-
-
 @Override
 public List<Usuario> listarPerfilesService() {
 	List<Usuario> result = (List<Usuario>) repositorio.findAll();
@@ -94,9 +92,7 @@ public List<Usuario> listarPerfilesService() {
 	if(result.size() > 0) {
 		return result;
 	} else {
-		return new ArrayList<Usuario>();
-	
-	
+		return new ArrayList<Usuario>();	
 } 
 }
 public Usuario geUsuarioById(Integer id){
@@ -110,6 +106,13 @@ public Usuario geUsuarioById(Integer id){
 	}
 }
 
+	public void darLike(Integer idusuario1,Integer idusuario2) {		
+		
+	}
+
+
+
+
 @Override
 public void crearContactoService(int idusuario1, int idusuario2) {
 	
@@ -119,12 +122,6 @@ public void crearContactoService(int idusuario1, int idusuario2) {
 		repositorio.save(contacto);
 		
 			}
-
-
-
-
-
-
 
 @Override
 public void crearDescarteService(int idusuario1, int idusuario2) {

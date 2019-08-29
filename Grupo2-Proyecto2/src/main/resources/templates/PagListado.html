@@ -2,9 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+<!-- Static content -->
+<link rel="stylesheet" href="/resources/css/estilos.css">
     <title>LucaTinder</title>
 </head>
 <body>
-    <h1>Estamos Dentro!</h1>
+   <table border="1" style="">
+			<tr>
+				<th>Usuario</th>
+				<th>Genero</th>
+				<th>Edad</th>
+				<th>Descripcion</th>
+			</tr>
+
+				<tr th:each="usuario2 : ${usuarios}">
+					<td th:text="${usuario2.nombre}"></td>
+					<td><span th:text="${usuario2.genero}" /></td>
+					<td><span th:text="${usuario2.edad}" /></td>
+					<td><span th:text="${usuario2.descripcion}" /></td>
+					<td><form method="post" th:action="@{/darlike}">
+            <input type="hidden" th:field="${usuario2.id}"/>
+            <input type="submit" value="Like" onClick="this.disabled=true">
+      </form>  <form method="post" th:action="@{/dardislike}">
+            <input type="hidden" th:field="${usuario2.id}" />
+            <input type="submit" value="Dislike" onClick="this.disabled=true">
+      </form></td>
+				</tr>
+		</table>
 </body>
 </html>
