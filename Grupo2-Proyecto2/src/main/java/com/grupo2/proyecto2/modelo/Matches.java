@@ -6,22 +6,17 @@ import javax.persistence.Table;
 
 
 
-
-
 @Entity
-@Table(name="contactos")
-public class Contacto {
+@Table(name="matches")
+public class Matches {
 
-	
-	
 	@Column
 	private Integer idusuario1;
 	
-	
 	@Column
 	private Integer idusuario2;
-	
-	public Contacto() {
+
+	public Matches() {
 		super();
 	}
 
@@ -30,17 +25,13 @@ public class Contacto {
 		return idusuario1;
 	}
 
-
 	public void setIdusuario1(Integer idusuario1) {
 		this.idusuario1 = idusuario1;
 	}
 
-
 	public Integer getIdusuario2() {
 		return idusuario2;
 	}
-
-
 
 	public void setIdusuario2(Integer idusuario2) {
 		this.idusuario2 = idusuario2;
@@ -49,10 +40,8 @@ public class Contacto {
 
 	@Override
 	public String toString() {
-		return "Contactos [idusuario1=" + idusuario1 + ", idusuario2=" + idusuario2 + "]";
+		return "Matches [idusuario1=" + idusuario1 + ", idusuario2=" + idusuario2 + "]";
 	}
-	
-	
 	
 	
 	
