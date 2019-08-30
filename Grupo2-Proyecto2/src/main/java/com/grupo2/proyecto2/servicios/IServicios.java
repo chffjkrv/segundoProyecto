@@ -29,6 +29,5 @@ public interface IServicios {
 
 	public void crearDescarteService(int idusuario1,int idusuario2);
 	
-	public void crearMatchService(int idusuario1, int idusuario2);
 
 }

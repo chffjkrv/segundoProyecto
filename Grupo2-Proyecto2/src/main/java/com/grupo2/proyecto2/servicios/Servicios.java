@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import com.github.javafaker.Faker;
 import com.grupo2.proyecto2.modelo.Contacto;
 import com.grupo2.proyecto2.modelo.Descartes;
-import com.grupo2.proyecto2.modelo.Matches;
 import com.grupo2.proyecto2.modelo.Usuario;
 import com.grupo2.proyecto2.repositorio.IContactoRepositorio;
+import com.grupo2.proyecto2.repositorio.IDescartesRepositorio;
 import com.grupo2.proyecto2.repositorio.IUsuarioRepositorio;
 
 
@@ -33,6 +33,9 @@ IUsuarioRepositorio repositorio;
 
 @Autowired
 IContactoRepositorio repocontacto;
+
+@Autowired
+IDescartesRepositorio repodescarte;
 
 
 @Override
@@ -102,8 +105,8 @@ IContactoRepositorio repocontacto;
 	public void crearContactoService(int idusuario1, int idusuario2) {
 	
 		Contacto contacto = new Contacto();
-		contacto.setIdusuario1(idusuario1);
-		contacto.setIdusuario2(idusuario2);
+		contacto.setidusuariocontact1(idusuario1);
+		contacto.setidusuariocontact2(idusuario2);
 		repocontacto.save(contacto);
 	}
 
@@ -113,15 +116,8 @@ IContactoRepositorio repocontacto;
 		Descartes descarte = new Descartes();
 		descarte.setIdusuario1(idusuario1);
 		descarte.setIdusuario2(idusuario2);
-		repocontacto.save(descarte);
+		repodescarte.save(descarte);
 	}
 
-@Override
-	public void crearMatchService(int idusuario1, int idusuario2) {
-	
-		Matches match = new Matches();
-		match.setIdusuario1(idusuario1);
-		match.setIdusuario2(idusuario2);
-		repositorio.save(match);
-	}	
+
 }

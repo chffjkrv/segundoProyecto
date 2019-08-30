@@ -2,6 +2,9 @@ package com.grupo2.proyecto2.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -15,6 +18,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name="contactos")
 public class Contacto {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
+	private Integer idcontacto;
 	
 	@Column
 	private Integer idusuariocontact1;
