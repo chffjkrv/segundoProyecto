@@ -15,32 +15,17 @@ import javax.persistence.Table;
 @Entity
 @Table(name="contactos")
 public class Contacto {
-
 	
-<<<<<<< HEAD
-	public Contacto() {
-		super();
-	}
-	
-	
-	
-	
-=======
->>>>>>> b4dfa76c4fd6e267d635b790a9dcf314cb5ccd9d
 	@Column
 	private Integer idusuariocontact1;
-	
-	
+		
 	@Column
-<<<<<<< HEAD
 	private Integer idusuariocontact2;
-=======
-	private Integer idusuario2;
+
 	
 	public Contacto() {
 		super();
 	}
->>>>>>> b4dfa76c4fd6e267d635b790a9dcf314cb5ccd9d
 
 
 	public Integer getidusuariocontact1() {
