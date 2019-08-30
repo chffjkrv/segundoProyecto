@@ -19,38 +19,40 @@ public class Contacto {
 	}
 	
 	
-	@Column
-	private Integer idusuario1;
 	
 	
 	@Column
-	private Integer idusuario2;
+	private Integer idusuariocontact1;
+	
+	
+	@Column
+	private Integer idusuariocontact2;
 
 
-	public Integer getIdusuario1() {
-		return idusuario1;
+	public Integer getidusuariocontact1() {
+		return idusuariocontact1;
 	}
 
 
-	public void setIdusuario1(Integer idusuario1) {
-		this.idusuario1 = idusuario1;
+	public void setidusuariocontact1(Integer idusuariocontact1) {
+		this.idusuariocontact1 = idusuariocontact1;
 	}
 
 
-	public Integer getIdusuario2() {
-		return idusuario2;
+	public Integer getidusuariocontact2() {
+		return idusuariocontact2;
 	}
 
 
 
-	public void setIdusuario2(Integer idusuario2) {
-		this.idusuario2 = idusuario2;
+	public void setidusuariocontact2(Integer idusuariocontact2) {
+		this.idusuariocontact2 = idusuariocontact2;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Contactos [idusuario1=" + idusuario1 + ", idusuario2=" + idusuario2 + "]";
+		return "Contactos [idusuario1=" + idusuariocontact1 + ", idusuario2=" + idusuariocontact2 + "]";
 	}
 	
 	
