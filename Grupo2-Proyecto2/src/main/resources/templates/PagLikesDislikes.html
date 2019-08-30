@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!-- Static content -->
+<link rel="stylesheet" href="/resources/css/estilos.css">
+    <title>LucaTinder</title>
+</head>
+<body>
+   <table border="1" style="">
+			<tr>
+				<th>Usuario</th>
+				<th>Genero</th>
+				<th>Edad</th>
+				<th>Descripcion</th>
+			</tr>
+
+				<tr th:each="usuario2 : ${usuarios}">
+					<td><span th:text="${usuario2.nombre}"/></td>
+					<td><span th:text="${usuario2.genero}" /></td>
+					<td><span th:text="${usuario2.edad}" /></td>
+					<td><span th:text="${usuario2.descripcion}" /></td>
+				</tr>
+		</table>
+</body>
+</html>

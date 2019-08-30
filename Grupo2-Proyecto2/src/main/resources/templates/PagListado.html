@@ -7,6 +7,10 @@
     <title>LucaTinder</title>
 </head>
 <body>
+<form method="post" th:object="${usuario}" th:action="@{/contactos}">
+            <input type="hidden" th:field="${usuario.id}"/>
+            <input type="submit" value="Contactos">
+      </form>
    <table border="1" style="">
 			<tr>
 				<th>Usuario</th>
