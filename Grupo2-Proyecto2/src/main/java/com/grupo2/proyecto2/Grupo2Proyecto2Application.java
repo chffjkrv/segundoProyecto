@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * @author grupo2
  * @since 27-08-2019
  */
+
 public class Grupo2Proyecto2Application {
 
 	public static void main(String[] args) {
