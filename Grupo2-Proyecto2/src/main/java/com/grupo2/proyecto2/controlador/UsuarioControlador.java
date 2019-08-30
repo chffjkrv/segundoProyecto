@@ -54,7 +54,7 @@ public class UsuarioControlador {
 		service.crearoEditarUsuarioService(usuario);
 		service.generaUsuarioRandomService();
 		List<Usuario> usu = service.listarPerfilesService();
-		model.addAttribute("usuarios", usu); 
+		model.addAttribute("usuarios", usu);
 		
 		return "PagListado";
 	}
@@ -72,24 +72,25 @@ public class UsuarioControlador {
 	@RequestMapping(path =  "/login")
 	public String encontrarUsuarioById(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
 		
-		usuario = service.geUsuarioById(usuario.getid());
+		usuario = service.geUsuarioById(usuario.getId());
 		
 		return "PagListado";
 	}
 		
 		
-	@RequestMapping(path="/darlike")
-	public void darLike(@ModelAttribute("usuario") Usuario usuario, @ModelAttribute("usuario2") Usuario usuario2,ModelMap model){
+	@GetMapping(path="/darlike")
+	public String darLike(@ModelAttribute("usuario") Usuario usuario, @ModelAttribute("usuario2") Usuario usuario2,ModelMap model){
 	
-		service.crearContactoService(usuario.getid(), usuario2.getid());
-	
+		service.crearContactoService(usuario.getId(), usuario2.getId());
+
+		return"PagLikesDislikes";
 	}
 	
 	
 	@RequestMapping(path="/contactos")
 	public String contacto(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
 	
-		return "Listado";
+		return "PagLikesDislikes";
 	}
 }
 

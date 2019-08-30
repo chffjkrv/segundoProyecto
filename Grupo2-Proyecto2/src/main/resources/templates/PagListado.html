@@ -25,7 +25,7 @@
 					<td><span th:text="${usuario2.edad}" /></td>
 					<td><span th:text="${usuario2.descripcion}" /></td>
  					<td><a class="boton" th:href="@{darlike?id=}+${usuario2.id}" onclick="deshabilitar(this)">Like</a> | <a
- 						th:href="@{dardislike?id=}+${usuario2.id}" onclick="deshabilitar(this)">Dislike</a></td> 
+ 						 class = "boton" th:href="@{dardislike?id=}+${usuario2.id}" onclick="deshabilitar(this)">Dislike</a></td> 
 				</tr>
 		</table>
 </body>

@@ -41,11 +41,11 @@ IDescartesRepositorio repodescarte;
 @Override
 	public Usuario crearoEditarUsuarioService(Usuario usu) {
 	
-		if(usu.getid()  == null) {
+		if(usu.getId()  == null) {
 			usu = repositorio.save(usu);			
 			return usu;
 		} else {
-			Optional<Usuario> usuario = repositorio.findById(usu.getid());
+			Optional<Usuario> usuario = repositorio.findById(usu.getId());
 			
 			if(usuario.isPresent()) {
 				Usuario newUser = usuario.get();
@@ -67,7 +67,7 @@ IDescartesRepositorio repodescarte;
 	public void generaUsuarioRandomService() {
 		Faker faker = new Faker((new Locale("{en-US}")));
 		
-		for (int i = 0; i <=60; i++) {
+		for (int i = 0; i <=20; i++) {
 			Usuario rnd= new Usuario();
 			rnd.setNombre(faker.name().firstName());
 			rnd.setGenero(faker.demographic().sex());
