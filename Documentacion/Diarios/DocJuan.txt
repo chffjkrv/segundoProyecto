@@ -36,7 +36,8 @@ JUEVES 29/08/2019:
 VIERNES 30/08/2019:
 ----------------------------|
 
-
+- Creación de la interfaz de la página principal del proyecto
+- Creación de la interfaz para listar los contactos y descartes
 
 
 LUNES 02/09/2019:

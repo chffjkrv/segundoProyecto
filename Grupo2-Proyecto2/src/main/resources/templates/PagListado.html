@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
 <!-- Static content -->
@@ -16,18 +16,24 @@
 			</tr>
 
 				<tr th:each="usuario2 : ${usuarios}">
-					<td th:text="${usuario2.nombre}"></td>
+					<td><span th:text="${usuario2.nombre}"/></td>
 					<td><span th:text="${usuario2.genero}" /></td>
 					<td><span th:text="${usuario2.edad}" /></td>
 					<td><span th:text="${usuario2.descripcion}" /></td>
-					<td><form method="post" th:action="@{/darlike}">
-            <input type="hidden" th:field="${usuario2.id}"/>
-            <input type="submit" value="Like" onClick="this.disabled=true">
-      </form>  <form method="post" th:action="@{/dardislike}">
-            <input type="hidden" th:field="${usuario2.id}" />
-            <input type="submit" value="Dislike" onClick="this.disabled=true">
-      </form></td>
+ 					<td><a class="boton" th:href="@{darlike?id=}+${usuario2.id}" onclick="deshabilitar(this)">Like</a> | <a
+ 						th:href="@{dardislike?id=}+${usuario2.id}" onclick="deshabilitar(this)">Dislike</a></td> 
 				</tr>
 		</table>
 </body>
+<script type="text/javascript">
+function deshabilitar( link ){
+    link.style.pointerEvents = 'none';
+    link.style.color = '#bbb';
+
+    setTimeout(function(){
+        link.style.pointerEvents = null;
+        link.style.color = 'blue';
+    }, 3000);
+}
+</script>
 </html>
