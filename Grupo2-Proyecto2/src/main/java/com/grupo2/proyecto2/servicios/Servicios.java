@@ -80,9 +80,13 @@ IDescartesRepositorio repodescarte;
 @Override
 	public List<Usuario> listarPerfilesService() {
 		List<Usuario> result = (List<Usuario>) repositorio.findAll();
+		List<Usuario> result20= new ArrayList<Usuario>();
 		
 		if(result.size() > 0) {
-			return result;
+			for (int i= 0; i<=20;i++) {
+				result20.add(result.get(i));
+			}
+			return result20;
 		} else {
 		return new ArrayList<Usuario>();	
 			} 
