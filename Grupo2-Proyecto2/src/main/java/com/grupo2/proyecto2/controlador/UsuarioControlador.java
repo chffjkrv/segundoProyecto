@@ -70,16 +70,18 @@ public class UsuarioControlador {
 	public String encontrarUsuarioById(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
 		
 		usuario = service.geUsuarioById(usuario.getId());
+		List<Usuario> usu = service.listarPerfilesService();
+		model.addAttribute("usuarios", usu);
 		
 		return "PagListado";
 	}
 		
 		
 	@GetMapping(path="/darlike")
-	public String darLike(@ModelAttribute("usuario") Usuario usuario, @ModelAttribute("usuario2") Usuario usuario2,ModelMap model){
+	public String darLike(@ModelAttribute("id1") Integer id1, @ModelAttribute("id2") Integer id2,ModelMap model){
 	
-		service.crearContactoService(usuario.getId(), usuario2.getId());
-
+		service.crearContactoService(id1, id2);
+		
 		return"PagLikesDislikes";
 	}
 	
