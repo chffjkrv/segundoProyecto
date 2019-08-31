@@ -1,9 +1,5 @@
 package com.grupo2.proyecto2.repositorio;
 
-import java.util.List;
-
-import com.grupo2.proyecto2.modelo.Contacto;
-
 /**
  * Nombre de clase. IUsuarioRepositoryCustom.
  * Descripcion. Interfaz de la capa repositorio en la cual se implementa querys propias 
@@ -15,5 +11,5 @@ import com.grupo2.proyecto2.modelo.Contacto;
 public interface IUsuarioRepositorioCustom {
 
 	
-	List<Contacto> findIdusuariocontact2ByIdusuariocontact1(int iduserlogged);
+	
 }

@@ -128,12 +128,15 @@ IDescartesRepositorio repodescarte;
 @Override
 public List<Usuario> listarContactos(int iduserlogeado) {
 	// usuarios que le gustan al usuario que esta logeado
-	List<Contacto>results = (List<Contacto>)repocontacto.findIdusuariocontact2ByIdusuariocontact1(iduserlogeado);
+	List<Contacto>results = (List<Contacto>)repocontacto.findByIdusuariocontact1(iduserlogeado);
 	List<Usuario>usuarioslikeados= new ArrayList<Usuario>();
 	for (Contacto c :results) {
 		usuarioslikeados.add(repositorio.getOne(c.getidusuariocontact2()));
 		
+		
 	}
+	usuarioslikeados.forEach(System.out::println);
+	
 	if(usuarioslikeados.size() > 0) {
 		return usuarioslikeados;
 	} else {
