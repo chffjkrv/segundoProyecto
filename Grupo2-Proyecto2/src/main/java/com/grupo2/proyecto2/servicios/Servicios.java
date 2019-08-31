@@ -82,6 +82,8 @@ IDescartesRepositorio repodescarte;
 		List<Usuario> result = (List<Usuario>) repositorio.findAll();
 		List<Usuario> result20= new ArrayList<Usuario>();
 		
+		
+		
 		if(result.size() > 0) {
 			for (int i= 0; i<=20;i++) {
 				result20.add(result.get(i));
@@ -122,6 +124,23 @@ IDescartesRepositorio repodescarte;
 		descarte.setIdusuario2(idusuario2);
 		repodescarte.save(descarte);
 	}
+
+@Override
+public List<Usuario> listarContactos(int iduserlogeado) {
+	// usuarios que le gustan al usuario que esta logeado
+	List<Contacto>results = (List<Contacto>)repocontacto.findIdusuariocontact2ByIdusuariocontact1(iduserlogeado);
+	List<Usuario>usuarioslikeados= new ArrayList<Usuario>();
+	for (Contacto c :results) {
+		usuarioslikeados.add(repositorio.getOne(c.getidusuariocontact2()));
+		
+	}
+	if(usuarioslikeados.size() > 0) {
+		return usuarioslikeados;
+	} else {
+		return new ArrayList<Usuario>();
+	}
+	
+}
 
 
 }

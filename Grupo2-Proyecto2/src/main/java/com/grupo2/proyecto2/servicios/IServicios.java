@@ -29,5 +29,10 @@ public interface IServicios {
 
 	public void crearDescarteService(int idusuario1,int idusuario2);
 	
+	public List<Usuario> listarContactos(int iduserlogeado);
+	
+	
+	
+	
 
 }

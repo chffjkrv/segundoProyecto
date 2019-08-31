@@ -52,7 +52,7 @@ public class UsuarioControlador {
 		//service.generaUsuarioRandomService();
 		List<Usuario> usu = service.listarPerfilesService();
 		model.addAttribute("usuarios", usu);
-		
+		logger.info("hihi");
 		return "PagListado";
 	}
 
