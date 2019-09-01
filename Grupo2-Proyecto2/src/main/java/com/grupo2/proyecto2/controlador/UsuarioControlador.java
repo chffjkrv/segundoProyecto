@@ -89,7 +89,7 @@ public class UsuarioControlador {
 	@RequestMapping(path="/contactos")
 	public String contacto(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
 		
-		service.listarContactos(6);
+		service.listarContactos(usuario.getId());
 	
 		return "PagLikesDislikes";
 	}

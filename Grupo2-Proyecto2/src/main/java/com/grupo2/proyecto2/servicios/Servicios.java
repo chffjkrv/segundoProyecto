@@ -103,9 +103,7 @@ IDescartesRepositorio repodescarte;
 			}
 	}
 
-	public void darLike(Integer idusuario1,Integer idusuario2) {		
-		
-	}
+	
 
 @Override
 	public void crearContactoService(int idusuario1, int idusuario2) {
@@ -143,6 +141,24 @@ public List<Usuario> listarContactos(int iduserlogeado) {
 		return new ArrayList<Usuario>();
 	}
 	
+}
+
+@Override
+public List<Usuario> listarDescartes(int iduserlogeado) {
+	List<Descartes>results = (List<Descartes>)repodescarte.findByIdusuario1(iduserlogeado);
+	List<Usuario>usuariosdescartados= new ArrayList<Usuario>();
+	for (Descartes d :results) {
+		usuariosdescartados.add(repositorio.getOne(d.getIdusuario2()));
+		
+		
+	}
+	usuariosdescartados.forEach(System.out::println);
+	
+	if(usuariosdescartados.size() > 0) {
+		return usuariosdescartados;
+	} else {
+		return new ArrayList<Usuario>();
+	}
 }
 
 

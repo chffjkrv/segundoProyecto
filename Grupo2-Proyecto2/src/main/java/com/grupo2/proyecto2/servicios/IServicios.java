@@ -31,6 +31,8 @@ public interface IServicios {
 	
 	public List<Usuario> listarContactos(int iduserlogeado);
 	
+	public List<Usuario> listarDescartes(int iduserlogeado);
+	
 	
 	
 	

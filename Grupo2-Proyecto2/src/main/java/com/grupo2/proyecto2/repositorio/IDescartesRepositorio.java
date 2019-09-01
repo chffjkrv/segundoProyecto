@@ -1,5 +1,7 @@
 package com.grupo2.proyecto2.repositorio;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,4 +17,6 @@ import com.grupo2.proyecto2.modelo.Descartes;
 @Repository
 public interface IDescartesRepositorio extends JpaRepository<Descartes, Integer>,IUsuarioRepositorioCustom{
 
+	
+	List<Descartes> findByIdusuario1(int iduserlogged);
 }
