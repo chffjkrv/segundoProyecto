@@ -19,6 +19,6 @@ import com.grupo2.proyecto2.modelo.Usuario;
 @Repository
 public interface IUsuarioRepositorio extends JpaRepository<Usuario, Integer>,IUsuarioRepositorioCustom{
 	
-	List<Usuario> findByGenero(String generopreferido);
+	List<Usuario> findByGeneroNotIgnoreCase(String generopreferido);
 }
 

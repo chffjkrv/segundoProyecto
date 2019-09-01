@@ -50,7 +50,7 @@ public class UsuarioControlador {
 		
 		service.crearoEditarUsuarioService(usuario);
 		//service.generaUsuarioRandomService();
-		List<Usuario> usu = service.listarPerfilesService();
+		List<Usuario> usu = service.listarPerfilesService(usuario.getGenero());
 		model.addAttribute("usuarios", usu);
 		logger.info("hihi");
 		return "PagListado";
@@ -70,7 +70,7 @@ public class UsuarioControlador {
 	public String encontrarUsuarioById(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
 		
 		usuario = service.geUsuarioById(usuario.getId());
-		List<Usuario> usu = service.listarPerfilesService();
+		List<Usuario> usu = service.listarPerfilesService(usuario.getGenero());
 		model.addAttribute("usuarios", usu);
 		
 		return "PagListado";

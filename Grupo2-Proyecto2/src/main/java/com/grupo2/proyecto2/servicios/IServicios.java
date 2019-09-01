@@ -21,7 +21,7 @@ public interface IServicios {
 	
 	public void generaUsuarioRandomService();
 
-	public List<Usuario> listarPerfilesService();
+	public List<Usuario> listarPerfilesService(String generouserlogeado);
 	
 	public Usuario geUsuarioById(Integer id) throws RecordTypeNotSupportedException;
 	
