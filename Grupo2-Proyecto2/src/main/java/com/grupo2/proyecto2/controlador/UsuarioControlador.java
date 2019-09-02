@@ -67,32 +67,50 @@ public class UsuarioControlador {
 	  
 	  
 	@RequestMapping(path =  "/login")
-	public String encontrarUsuarioById(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
-		
+	public String encontrarUsuarioById(@ModelAttribute("usuario") Usuario usuario, ModelMap model,
+										@ModelAttribute("usuario2") Usuario usuario2, ModelMap model2){
+		logger.info("-----------------estamos en login--------------------------------------");
+		System.out.println("usuario logeado:   "+usuario.toString());
 		usuario = service.geUsuarioById(usuario.getId());
+		
+		System.out.println("----------------------------------------------------");
+		System.out.println("---------"+usuario.toString());
+		System.out.println("----------------------------------------------------");
+		
+		
 		List<Usuario> usu = service.listarPerfilesService(usuario.getGenero());
 		model.addAttribute("usuarios", usu);
+		model.addAttribute("usuario", usuario);
 		
 		return "PagListado";
 	}
 		
 		
 	@GetMapping(path="/darlike")
-	public String darLike(@ModelAttribute("id1") Integer id1, @ModelAttribute("id2") Integer id2,ModelMap model){
-	
-		service.crearContactoService(id1, id2);
+	public String darLike(@ModelAttribute("usuario") Usuario usuario, ModelMap model,
+			@ModelAttribute("usuario2") Usuario usuario2, ModelMap model2){
 		
-		return"PagLikesDislikes";
-	}
+		logger.info("-----------------estamos en darLike--------------------------------------");
+
 	
+		service.crearContactoService(usuario.getId(), usuario2.getId());
+		
+
+		List<Usuario> usu = service.listarPerfilesService(usuario.getGenero());
+		model.addAttribute("usuarios", usu);
+		return"PagListado";
+	}
 	
 	@RequestMapping(path="/contactos")
-	public String contacto(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
-		
-		service.listarContactos(usuario.getId());
-	
-		return "PagLikesDislikes";
-	}
+    public String contacto(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
+        List <Usuario>  usu = service.listarContactos(usuario.getId());
+        System.out.println(usu.toString());
+        model.addAttribute("usuarios",usu);
+    
+        return "PagLikesDislikes";
+    }
+
+
 }
 
 //@GetMapping(value="/random")
