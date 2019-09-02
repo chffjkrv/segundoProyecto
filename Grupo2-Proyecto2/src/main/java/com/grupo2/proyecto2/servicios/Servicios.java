@@ -5,10 +5,13 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.javafaker.Faker;
+import com.grupo2.proyecto2.controlador.UsuarioControlador;
 import com.grupo2.proyecto2.modelo.Contacto;
 import com.grupo2.proyecto2.modelo.Descartes;
 import com.grupo2.proyecto2.modelo.Usuario;
@@ -36,6 +39,8 @@ public class Servicios implements IServicios {
 
 	@Autowired
 	IDescartesRepositorio repodescarte;
+	
+	private static final Logger logger = LoggerFactory.getLogger(Servicios.class);
 
 	@Override
 	public Usuario crearoEditarUsuarioService(Usuario usu) {

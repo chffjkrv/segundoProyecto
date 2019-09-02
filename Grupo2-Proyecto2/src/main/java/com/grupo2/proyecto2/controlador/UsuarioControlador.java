@@ -69,15 +69,9 @@ public class UsuarioControlador {
 	@RequestMapping(path =  "/login")
 	public String encontrarUsuarioById(@ModelAttribute("usuario") Usuario usuario, ModelMap model,
 										@ModelAttribute("usuario2") Usuario usuario2, ModelMap model2){
-		logger.info("-----------------estamos en login--------------------------------------");
-		System.out.println("usuario logeado:   "+usuario.toString());
+
 		usuario = service.geUsuarioById(usuario.getId());
-		
-		System.out.println("----------------------------------------------------");
-		System.out.println("---------"+usuario.toString());
-		System.out.println("----------------------------------------------------");
-		
-		
+
 		List<Usuario> usu = service.listarPerfilesService(usuario.getGenero());
 		model.addAttribute("usuarios", usu);
 		model.addAttribute("usuario", usuario);
@@ -90,9 +84,6 @@ public class UsuarioControlador {
 	public String darLike(@ModelAttribute("usuario") Usuario usuario, ModelMap model,
 			@ModelAttribute("usuario2") Usuario usuario2, ModelMap model2){
 		
-		logger.info("-----------------estamos en darLike--------------------------------------");
-
-	
 		service.crearContactoService(usuario.getId(), usuario2.getId());
 		
 
@@ -101,9 +92,34 @@ public class UsuarioControlador {
 		return"PagListado";
 	}
 	
+	
 	@RequestMapping(path="/contactos")
     public String contacto(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
+		
         List <Usuario>  usu = service.listarContactos(usuario.getId());
+        System.out.println(usu.toString());
+        model.addAttribute("usuarios",usu);
+    
+        return "PagLikesDislikes";
+    }
+	
+	@GetMapping(path="/darDislike")
+	public String darDisLike(@ModelAttribute("usuario") Usuario usuario, ModelMap model,
+			@ModelAttribute("usuario2") Usuario usuario2, ModelMap model2){
+		
+		service.crearDescarteService(usuario.getId(), usuario2.getId());
+		
+
+		List<Usuario> usu = service.listarPerfilesService(usuario.getGenero());
+		model.addAttribute("usuarios", usu);
+		return"PagListado";
+	}
+	
+	
+	@RequestMapping(path="/descarte")
+    public String descarte(@ModelAttribute("usuario") Usuario usuario, ModelMap model){
+		
+        List <Usuario>  usu = service.listarDescartes(usuario.getId());
         System.out.println(usu.toString());
         model.addAttribute("usuarios",usu);
     
@@ -112,19 +128,3 @@ public class UsuarioControlador {
 
 
 }
-
-//@GetMapping(value="/random")
-//	public  String newRandom(ModelMap model) {
-//		
-//		logger.info("-- en RANDOM");
-//		Faker faker = new Faker((new Locale("{en-US}")));
-//		Usuario rndi= new Usuario();
-//		rnd.setNombre(faker.name().firstName());
-//		rnd.setGenero(faker.demographic().sex());
-//		rnd.setEdad(faker.number().numberBetween(12, 90));
-//		rnd.setDescripcion(faker.yoda().quote());
-//		model.addAttribute("user",(service.generaUsuarioRandomService()));
-//		//service.crearoEditarUsuarioService(rnd);
-//		return "redirect:/";
-//	
-//}
