@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Nombre de clase. Usuario
  * Descripcion. Objeto modelo de Usuario el cual usaremos con JPA par insertar y extraer datos.
@@ -17,6 +19,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="usuarios")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Usuario {
 	
 	public Usuario() {
