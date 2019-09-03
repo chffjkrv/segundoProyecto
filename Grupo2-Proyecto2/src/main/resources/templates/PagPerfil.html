@@ -1,43 +1,105 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-<!-- Static content -->
-<link rel="stylesheet" href="/resources/css/estilos.css">
-    <title>Registro</title>
+	<title>Registro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/resources/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/resources/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/resources/css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
-    <div id="contenedor">
-		<h2>
-			Registro
-		</h2>
-		<form 
-				method="post" 
+
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="post" 
 				th:object="${usuario}"
 				th:action="@{/listados}">
-			<table>
-				<tr>
-					<td><label for="nombre">Nombre:</label></td>
-					<td><input type="text" th:field="*{nombre}" /></td>
-				</tr>
-				<tr>
-					<td><label for="genero">Genero:</label></td>
-					<td><input type="text" th:field="*{genero}" /></td>
-				</tr>
-				<tr>
-					<td><label for="edad">Edad:</label></td>
-					<td><input type="text" th:field="*{edad}" /></td>
-				</tr>
-				<tr>
-					<td><label for="descripcion">Descripcion:</label></td>
-					<td><input type="text" th:field="*{descripcion}" /></td>
-				</tr>
-			</table>
-			<br />
-			<p>
-				<input type="submit" value="Registrar" />
-			</p>
-		</form>		
+				<span class="contact100-form-title">
+					Vamos, date de alta
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Introduce tu nombre">
+					<input class="input100" type="text" name="nombre" placeholder="Nombre" th:field="*{nombre}" />
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Genero(male/female)">
+					<input class="input100" type="text" name="genero" placeholder="Genero(male/female)" th:field="*{genero}" />
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Edad">
+					<input class="input100" type="text" name="edad" placeholder="Edad" th:field="*{edad}" />
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Introduzca una breve descricpión sobre usted mismo">
+					<textarea class="input100" name="descripcion" placeholder="Introduzca una breve descricpión sobre usted mismo" th:field="*{descripcion}" ></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							MARCHANDO
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
 	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="/resources/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/resources/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/resources/vendor/bootstrap/js/popper.js"></script>
+	<script src="/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/resources/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/resources/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/resources/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/resources/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="/resources/js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
 </body>
 </html>

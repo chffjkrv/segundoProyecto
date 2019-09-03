@@ -3,24 +3,78 @@
 <head>
     <meta charset="UTF-8">
 <!-- Static content -->
-<link rel="stylesheet" href="/resources/css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
     <title>LucaTinder</title>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!---------------->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/resources/css/grayscale.css">
 </head>
-<body>
-   <table border="1" style="">
-			<tr>
-				<th>Usuario</th>
-				<th>Genero</th>
-				<th>Edad</th>
-				<th>Descripcion</th>
-			</tr>
+<body class="Listadofondo">
+	
+		<div class="container">
+	<div class="row">
+		
+        
+        <div class="col-md-12">
+        <div class="table-responsive">
 
-				<tr th:each="usuario2 : ${usuarios}">
+                
+              <table id="mytable" class="table table-bordred table-striped">
+                   
+                   <thead>
+                   
+						<th>Usuario</th>
+						<th>Genero</th>
+						<th>Edad</th>
+						<th>Descripcion</th>
+				
+                   </thead>
+    <tbody>
+    
+    			<tr th:each="usuario2 : ${usuarios}">
 					<td><span th:text="${usuario2.nombre}"/></td>
 					<td><span th:text="${usuario2.genero}" /></td>
 					<td><span th:text="${usuario2.edad}" /></td>
-					<td><span th:text="${usuario2.descripcion}" /></td>
+					<td><span th:text="${usuario2.descripcion}" /></td> 
 				</tr>
-		</table>
+    </tbody>
+        
+</table>
+        </div>
+	</div>
+</div>		
 </body>
+<script type="text/javascript">
+function deshabilitar( link ){
+    link.style.pointerEvents = 'none';
+    link.style.color = '#bbb';
+
+    setTimeout(function(){
+        link.style.pointerEvents = null;
+        link.style.color = 'blue';
+    }, 3000);
+}
+$(document).ready(function(){
+	$("#mytable #checkall").click(function () {
+	        if ($("#mytable #checkall").is(':checked')) {
+	            $("#mytable input[type=checkbox]").each(function () {
+	                $(this).prop("checked", true);
+	            });
+
+	        } else {
+	            $("#mytable input[type=checkbox]").each(function () {
+	                $(this).prop("checked", false);
+	            });
+	        }
+	    });
+	    
+	    $("[data-toggle=tooltip]").tooltip();
+	});
+
+</script>
+
+	
 </html>
