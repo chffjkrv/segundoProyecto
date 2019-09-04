@@ -2,6 +2,8 @@ package com.grupo2.proyecto2.controlador;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +28,8 @@ import com.grupo2.proyecto2.servicios.IServicios;
 @RestController
 @RequestMapping({ "/users" })
 public class UsuarioControladorRest {
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(UsuarioControladorRest.class);
 	@Autowired
 	private IServicios servicios;
 	@Autowired
@@ -34,19 +37,20 @@ public class UsuarioControladorRest {
 
 	@PostMapping(path = { "/adduser" })
 	public Usuario crearUsuario(@RequestBody Usuario user) {
+		logger.info("----Agnadiendo Usuario----");
 		return servicios.crearoEditarUsuarioService(user);
 	}
 
 	@GetMapping(path = { "/login/{id}" })
 	public Usuario login(@PathVariable("id") int id) {
+		logger.info("----Logeando----");
 		return servicios.geUsuarioById(id);
 	}
 
-	@GetMapping // (path = { "/{id}" })
+	@GetMapping 
 	public List<Usuario> listarPerfiles(@RequestBody Usuario user) {
-
+		logger.info("----Recibiendo Perfiles----");
 		servicios.crearoEditarUsuarioService(user);
-		// service.generaUsuarioRandomService();
 		List<Usuario> usu = servicios.listarPerfilesService(user.getGenero());
 
 		return usu;
@@ -54,26 +58,27 @@ public class UsuarioControladorRest {
 
 	@GetMapping(path = { "/listall" })
 	public List<Usuario> findAll() {
+		logger.info("----Recibiendo todos los usuarios----");
 		return repo.findAll();
 	}
 
 	@GetMapping(path = { "/darlike/{id1}/{id2}" })
 	public void darLike(@PathVariable("id1") int id1, @PathVariable("id2") int id2) {
-
+		logger.info("----Dando like----");
 		servicios.crearContactoService(id1, id2);
 
 	}
 
 	@GetMapping(path = { "/dardislike/{id1}/{id2}" })
 	public void darDisike(@PathVariable("id1") int id1, @PathVariable("id2") int id2) {
-
+		logger.info("----Dando dislike----");
 		servicios.crearDescarteService(id1, id2);
 
 	}
 
 	@GetMapping(path = { "/listardescartes/{id}" })
 	public List<Usuario> listarDescartes(@PathVariable("id") int id) {
-
+		logger.info("----Recibiendo descartes----");
 		List<Usuario> descartes = servicios.listarDescartes(id);
 
 		return descartes;
@@ -81,7 +86,7 @@ public class UsuarioControladorRest {
 
 	@GetMapping(path = { "/listarcontactos/{id}" })
 	public List<Usuario> listarContactos(@PathVariable("id") int id) {
-
+		logger.info("----Recibiendo contactos----");
 		List<Usuario> contactos = servicios.listarContactos(id);
 
 		return contactos;
