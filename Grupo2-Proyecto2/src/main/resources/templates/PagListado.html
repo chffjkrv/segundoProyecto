@@ -41,14 +41,19 @@
 					<td><span th:text="${usuario2.edad}" /></td>
 					<td><span th:text="${usuario2.descripcion}" /></td>
  					<td><a class="botonlike" th:href="@{darlike?usuario=}+${usuario.id}+@{&usuario2=}+${usuario2.id}" onclick="deshabilitar(this)">Like</a> | 
- 					<a class = "botonNOlike" href="#" onclick="deshabilitar(this)">Dislike</a></td>   
+ 					<a class = "botonNOlike" th:href="@{darDislike?usuario=}+${usuario.id}+@{&usuario2=}+${usuario2.id}"  onclick="deshabilitar(this)">Dislike</a></td>   
 				</tr>
     </tbody>
         
 </table>
-		<form class="button-form" method="post" th:object="${usuario}" th:action="@{/contactos}" >
+		<form class="button-form float-right" method="post" th:object="${usuario}" th:action="@{/contactos}" >
             <input type="hidden" th:field="${usuario.id}"/>
             <button type="submit" class="btn btn-info">Contactos</button>
+      </form>
+      
+      <form class="button-form float-left" method="post" th:object="${usuario}" th:action="@{/descarte}" >
+            <input type="hidden" th:field="${usuario.id}"/>
+            <button type="submit" class="btn btn-info">Descartes</button>
       </form>
         </div>
 	</div>

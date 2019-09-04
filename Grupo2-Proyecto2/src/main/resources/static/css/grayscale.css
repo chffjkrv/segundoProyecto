@@ -123,7 +123,10 @@
     border-radius: 6px;
     border: 2px solid #86FF99;
 }
-.button-form{
+.button-formContactos{
+	text-align:center;	
+}
+.button-formdescarte{
 	text-align:center;
 }
 .masthead {
