@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user';
+import { User } from '../../models/user';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { User } from 'src/app/models/user';
 export class LoginComponent implements OnInit {
 
   user: User;
+  formulario: FormGroup;
 
   constructor(private userService: UserService, private router: Router) {
 
@@ -19,18 +21,21 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit() {
-  }
+    this.formulario = new FormGroup({id: new FormControl(null, Validators.required)
+  });
+}
 
 
-  login(user: User): void {
-    this.userService.comprobarUser(user.id)
+  login(): void {
+    this.userService.comprobarUser(this.formulario.value.id)
       .subscribe(Response => {
+        
         if (Response == null) {
           alert('Usuario no existe');
           // this.router.navigate(['/add']);
         } else {
           alert('Usuario existe');
-          window.localStorage.setItem('usuarioId', user.id);
+          window.localStorage.setItem('usuarioId',this.formulario.value.id);
           // this.router.navigate(['/listado']);
 
         }

@@ -9,7 +9,7 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 //Nuevo
 import { UserService } from './services/user.service';
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     //Nuevo
     HttpClientModule,
-    FormsModule    
+    FormsModule,
+    ReactiveFormsModule   
   ],
   //Nuevo el provider
   providers: [UserService],
