@@ -33,4 +33,9 @@ export class UserService {
     return this.http.post<User>(this.userUrl+"/adduser", user);
   }
 
+  public comprobarUser(id){
+    return this.http.get(this.userUrl + "/login"+ id);
+  }
+
+
 }
