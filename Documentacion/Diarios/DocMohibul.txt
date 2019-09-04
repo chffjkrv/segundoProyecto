@@ -47,7 +47,7 @@ Terminado todos los metodos de controller.
 
 MARTES 03/09/2019:
 ----------------------------|
-
+Intentado arreglar error en el metodo de contactos angular
 
 
 

@@ -26,14 +26,17 @@ export class UserComponent implements OnInit {
       .subscribe( data => {
         this.users = data;
       });
-  };
+  }
 
   deleteUser(user: User): void {
     this.userService.deleteUser(user)
       .subscribe( data => {
         this.users = this.users.filter(u => u !== user);
-      })
-  };
+      });
+  }
+
+
+  }
 
   dame20(user:User){
     this.userService.dame20(user)

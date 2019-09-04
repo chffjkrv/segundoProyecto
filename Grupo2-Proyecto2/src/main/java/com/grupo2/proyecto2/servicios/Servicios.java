@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.javafaker.Faker;
-import com.grupo2.proyecto2.controlador.UsuarioControlador;
 import com.grupo2.proyecto2.modelo.Contacto;
 import com.grupo2.proyecto2.modelo.Descartes;
 import com.grupo2.proyecto2.modelo.Usuario;
