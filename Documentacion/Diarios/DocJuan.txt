@@ -50,15 +50,15 @@ LUNES 02/09/2019:
 MARTES 03/09/2019:
 ----------------------------|
 
-
-
+- I+D de REST y Angular
+- Generar metodos para la clase RestUsuarioControlador
 
 
 
 MIERCOLES 04/09/2019:
 -------------------------------|
 
-
+- Generar metodos para la clase RestUsuarioControlador
 
 
 
