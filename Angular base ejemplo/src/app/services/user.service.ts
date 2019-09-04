@@ -38,16 +38,11 @@ export class UserService {
     return this.http.post<User>(this.userUrl+"/adduser", user);
   }
 
-<<<<<<< HEAD
-  public dame20(user){
-    return this.http.get<User[]>(this.userUrl+"/",user);
-  }
 
-=======
   public comprobarUser(id){
-    return this.http.get(this.userUrl + "/login"+ id);
+    return this.http.get(this.userUrl + "/login"+"/"+ id);
   }
 
 
->>>>>>> 0008a3d857ba6862f3e19a6b4407c8ad9d0ff1ad
+
 }

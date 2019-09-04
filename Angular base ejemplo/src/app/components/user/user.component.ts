@@ -38,12 +38,3 @@ export class UserComponent implements OnInit {
 
   }
 
-  dame20(user:User){
-    this.userService.dame20(user)
-      ._subscribe(data => {
-        this.users
-      })
-  }
-  }
-
-}
