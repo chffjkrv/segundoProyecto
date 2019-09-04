@@ -18,8 +18,11 @@
       <td>{{user.genero}}</td>
       <td>{{user.edad}}</td>
       <td>{{user.descripcion}}</td>
+      <td><a class="botonlike" th:href="@{darlike?usuario=}+${usuario.id}+@{&usuario2=}+${usuario2.id}" onclick="deshabilitar(this)">Like</a> | 
+        <a class = "botonNOlike" href="#" onclick="deshabilitar(this)">Dislike</a></td>  
       <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
     </tr>
     </tbody>
   </table>
   </div>
+

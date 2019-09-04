@@ -18,8 +18,13 @@ export class UserService {
   constructor(private http:HttpClient) {}
   //private userUrl = 'https://jsonplaceholder.typicode.com/users';
   private userUrl = 'http://localhost:8080/user-portal/users';
+  
+  
   //private userUrl = '/api';
 
+
+
+  
   public getUsers() {
     return this.http.get<User[]>(this.userUrl+"/listall");
   }
@@ -31,6 +36,10 @@ export class UserService {
 
   public createUser(user) {
     return this.http.post<User>(this.userUrl+"/adduser", user);
+  }
+
+  public dame20(user){
+    return this.http.get<User[]>(this.userUrl+"/",user);
   }
 
 }

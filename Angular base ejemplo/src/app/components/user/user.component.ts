@@ -22,7 +22,7 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getUsers()
+    this.userService.dame20(user)
       .subscribe( data => {
         this.users = data;
       });
@@ -34,5 +34,13 @@ export class UserComponent implements OnInit {
         this.users = this.users.filter(u => u !== user);
       })
   };
+
+  dame20(user:User){
+    this.userService.dame20(user)
+      ._subscribe(data => {
+        this.users
+      })
+  }
+  }
 
 }
