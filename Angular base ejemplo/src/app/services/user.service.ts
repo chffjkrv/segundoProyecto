@@ -12,7 +12,13 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
+
+
+user: User;
+
 export class UserService {
+
   //Todo lo de la clase es nuevo
 
   constructor(private http:HttpClient) {}
@@ -23,10 +29,13 @@ export class UserService {
   //private userUrl = '/api';
 
 
-
+//Hay que crear el metodo dame20 y mostrarlo por pantalla, para esto
+//hay que recuperar el id del componente login y según este id
+//conseguir el genero para asi mandar la consulta list20 
+//la cual ya está creada en el servidor.
   
   public getUsers() {
-    return this.http.get<User[]>(this.userUrl+"/listall");
+    return this.http.get<User[]>(this.userUrl+"/list20");
   }
 
   //http://localhost:8080/user-portal/users/5

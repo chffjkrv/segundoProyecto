@@ -47,7 +47,7 @@ public class UsuarioControladorRest {
 		return servicios.geUsuarioById(id);
 	}
 
-	@GetMapping 
+	@GetMapping(path = { "/list20/{genero}" })
 	public List<Usuario> listarPerfiles(@RequestBody Usuario user) {
 		logger.info("----Recibiendo Perfiles----");
 		servicios.crearoEditarUsuarioService(user);

@@ -16,17 +16,18 @@ export class UserComponent implements OnInit {
   //Todo la clase es nueva
 
   users: User[];
+  id: number;
 
   constructor(private router: Router, private userService: UserService) {
 
   }
 
   ngOnInit() {
-    this.userService.dame20(user)
+    this.userService.getUsers()
       .subscribe( data => {
         this.users = data;
       });
-  }
+  };
 
   deleteUser(user: User): void {
     this.userService.deleteUser(user)
@@ -34,7 +35,5 @@ export class UserComponent implements OnInit {
         this.users = this.users.filter(u => u !== user);
       });
   }
-
-
-  }
+}
 
