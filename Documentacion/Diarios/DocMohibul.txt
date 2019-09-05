@@ -47,7 +47,7 @@ Terminado todos los metodos de controller.
 
 MARTES 03/09/2019:
 ----------------------------|
-
+Empezando con el controller rest
 
 
 
@@ -55,7 +55,7 @@ MARTES 03/09/2019:
 
 MIERCOLES 04/09/2019:
 -------------------------------|
-
+Crear el componente login
 
 
 
@@ -63,7 +63,8 @@ MIERCOLES 04/09/2019:
 
 JUEVES 05/09/2019:
 ----------------------------|
-
+Desesperacion!!!! Terminado los html de login y añadir usuario con daniel,
+Terminado la prueba unitaria obligada, también terminado los test de PRL. Ovbiamente, más cerca de la muerte.
 
 
 
