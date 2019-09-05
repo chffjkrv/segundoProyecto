@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
+
 import { AddUserComponent } from './components/add-user/add-user.component';
 
 //Nuevo
@@ -18,7 +18,6 @@ import { ListardescartesComponent } from './components/listardescartes/listardes
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
     AddUserComponent,
     LoginComponent,
     ListarUsersComponent,

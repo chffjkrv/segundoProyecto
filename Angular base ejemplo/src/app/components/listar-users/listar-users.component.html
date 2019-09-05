@@ -1,7 +1,7 @@
 <div class="Listadofondo row m-0 p-0">        
   <div class="col-md-12">
     <br/><br/><br/><br/>
-  <h4 class="mozas">A ver que te parecen estas MOOOOZAS</h4>
+  <h4 class="mozas">A ver que te parecen est@s MOOOOZ@S</h4>
   <div class="table-responsive">
 
           
@@ -17,8 +17,8 @@
              </thead>
 <tbody>
 
-    <tr *ngFor="let user of users">
-      <td><img src="http://placeimg.com/200/200/people" alt=""></td>
+    <tr *ngFor="let user of users;let i=index">
+    <td><img src="../../../assets/fotosAndrg/{{i}}.jpg" alt="" width="200" height="200"></td>
     <td><span>{{user.nombre}}</span></td>
     <td><span>{{user.genero}}</span></td>
     <td><span>{{user.edad}}</span></td>

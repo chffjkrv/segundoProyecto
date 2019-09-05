@@ -35,7 +35,7 @@ export class UserService {
 //la cual ya está creada en el servidor.
   
   public getUsers() {
-    return this.http.get<User[]>(this.userUrl+"/list20");
+    return this.http.get<User[]>(this.userUrl);
   }
 
   //http://localhost:8080/user-portal/users/5
@@ -47,6 +47,9 @@ export class UserService {
     return this.http.post<User>(this.userUrl+"/adduser", user);
   }
 
+  public idUltimo() {
+    return this.http.get<number>(this.userUrl+"/ultimoid");
+  }
 
   public comprobarUser(id){
     return this.http.get(this.userUrl + "/login"+"/"+ id);

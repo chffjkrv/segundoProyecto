@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //Nuevo
-import { UserComponent } from './components/user/user.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
 import { ListarUsersComponent } from './components/listar-users/listar-users.component';
@@ -11,7 +10,6 @@ import { ListardescartesComponent } from './components/listardescartes/listardes
 
 //Creo las rutas
 const routes: Routes = [
-  { path: 'users', component: UserComponent },
   { path: 'add', component: AddUserComponent },
   { path: 'login', component: LoginComponent},
   { path: 'listado', component: ListarUsersComponent },

@@ -208,6 +208,10 @@
     background-color: #467370 !important;
 }
 
+td{
+    font-weight: bolder;
+}
+
 .about-section {
     padding-top: 10rem;
     background:color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8));
