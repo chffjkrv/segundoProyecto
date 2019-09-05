@@ -1,13 +1,28 @@
-<div class="container-fluid">
-  <div class="col-md-offset-1">
-    <h1>
-      Welcome to {{title}}!
-    </h1>
-  </div>
-  
-  <a routerLink="/login">List Users</a>
-  <a style="margin-left:10px" routerLink="/add">Add User</a>
-  <br/>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top colortxt" id="mainNav">
+    <div class="container-fluid">
+      <div class="row col-12 p-0 m-0">
+        <a class="navbar-brand text-white col-6 col-lg-4 m-0" routerLink="/login">Comienza tu nueva vida</a>
+        <button class="navbar-toggler col-6 text-white" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse col-lg-8 " id ="navbarResponsive">
+          <ul class="navbar-nav ml-auto col-lg-12 d-lg-flex justify-content-between">
+            <li class="nav-item">
+              <a class="nav-linkr margin-right:50px text-white" routerLink="/users">Listado opciones</a>
+            </li>
+            <li>
+              <a style="nav-link" class="text-white" routerLink="/add">Regristrate y moharas HULIO!</a>
+            </li>
+            <li>
+                <a style="nav-link" class="text-white" routerLink="/listContactos">Listado contactos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
   <router-outlet></router-outlet>
-  </div>
-  
+</div>;

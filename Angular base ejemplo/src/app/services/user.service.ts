@@ -15,7 +15,7 @@ const httpOptions = {
 
 
 
-user: User;
+
 
 export class UserService {
 

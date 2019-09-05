@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import { User } from '../../models/user';
@@ -29,17 +29,17 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.userService.comprobarUser(this.formulario.value.id)
       .subscribe(Response => {
+        console.log(Response);
         
-        if (Response == null) {
-          alert('Usuario no existe');
-          // this.router.navigate(['/add']);
-        } else {
           alert('Usuario existe');
           window.localStorage.setItem('usuarioId',this.formulario.value.id);
-          // this.router.navigate(['/listado']);
+          this.router.navigate(['/listado']);
 
-        }
+        
 
+
+      }, error => {
+        this.router.navigate(['/add'])
 
       });
   }

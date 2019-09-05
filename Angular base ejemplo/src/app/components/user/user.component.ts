@@ -13,10 +13,11 @@ import { UserService } from '../../services/user.service';
 })
 export class UserComponent implements OnInit {
 
-  //Todo la clase es nueva
+  // Todo la clase es nueva
 
   users: User[];
-  id: number;
+
+  // id: number;
 
   constructor(private router: Router, private userService: UserService) {
 
