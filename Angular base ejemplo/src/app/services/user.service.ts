@@ -15,10 +15,10 @@ const httpOptions = {
 
 
 
-user: User;
+
 
 export class UserService {
-
+  
   //Todo lo de la clase es nuevo
 
   constructor(private http:HttpClient) {}
@@ -52,6 +52,23 @@ export class UserService {
     return this.http.get(this.userUrl + "/login"+"/"+ id);
   }
 
+  public listarPerfiles(){
+    return this.http.get<User[]>(this.userUrl+"/"+window.localStorage.getItem('usuarioId'));
+  }
 
+  public darLike(userid2){
+    return this.http.get<void>(this.userUrl+"/darlike"+"/"+window.localStorage.getItem('usuarioId')+"/"+userid2);
+  }
+
+  public darDislike(userid2){
+    return this.http.get<void>(this.userUrl+"/dardislike"+"/"+window.localStorage.getItem('usuarioId')+"/"+userid2);
+  }
+
+  public listarcontactos(id){
+    return this.http.get<User[]>(this.userUrl + "/listarcontactos"+"/"+ id);
+  }
+  public listardescartes(id){
+    return this.http.get<User[]>(this.userUrl + "/listardescartes"+"/"+ id);
+  }
 
 }

@@ -11,13 +11,19 @@ import { UserService } from './services/user.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { ListarUsersComponent } from './components/listar-users/listar-users.component';
+import { ListarcontactosComponent } from './components/listarcontactos/listarcontactos.component';
+import { ListardescartesComponent } from './components/listardescartes/listardescartes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     AddUserComponent,
-    LoginComponent
+    LoginComponent,
+    ListarUsersComponent,
+    ListarcontactosComponent,
+   ListardescartesComponent
   ],
   imports: [
     BrowserModule,

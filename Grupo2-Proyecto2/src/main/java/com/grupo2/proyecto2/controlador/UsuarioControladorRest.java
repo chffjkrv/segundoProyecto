@@ -47,13 +47,10 @@ public class UsuarioControladorRest {
 		return servicios.geUsuarioById(id);
 	}
 
-	@GetMapping(path = { "/list20/{genero}" })
-	public List<Usuario> listarPerfiles(@RequestBody Usuario user) {
+	@GetMapping(path = {"/{id}"}) 
+	public List<Usuario> listarPerfiles(@PathVariable("id") int id) {
 		logger.info("----Recibiendo Perfiles----");
-		servicios.crearoEditarUsuarioService(user);
-		List<Usuario> usu = servicios.listarPerfilesService(user.getGenero());
-
-		return usu;
+		return servicios.listarPerfilesService(servicios.geUsuarioById(id).getGenero());
 	}
 
 	@GetMapping(path = { "/listall" })
