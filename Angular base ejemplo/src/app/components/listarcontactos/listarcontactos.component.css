@@ -6,7 +6,7 @@
 
  #mainNav {
     min-height: 56px;
-    background-color: #ff00ff;
+    background-color: #fff;
 }
 
 #mainNav .navbar-toggler {
@@ -42,8 +42,8 @@
     #mainNav {
         padding-top: 0;
         padding-bottom: 0;
-        border-bottom:none;
-        background-color: #653691;
+        border-bottom: none;
+        background-color: transparent;
         -webkit-transition: background-color 0.3s ease-in-out;
         transition: background-color 0.3s ease-in-out;
     }
@@ -57,8 +57,7 @@
         -webkit-transition: none;
         transition: none;
         padding: 2rem 1.5rem;
-        color: #3DA660;
-        font-weight: bolder;
+        color: rgba(255, 255, 255, 0.5);
     }
 
     #mainNav .nav-link:hover {
@@ -98,8 +97,8 @@
     }
 }
 .Listadofondo{
-    background-image: url("../assets/16.jpg");
-
+    background-image: url("../../../assets/16.jpg");
+    height: 100%;
 }
 
 .botonNOlike{
@@ -134,7 +133,7 @@
     min-height: 35rem;
     padding: 15rem 0;
     /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616) url ("../../../assets/11.jpg"));*/
-    background: /*linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%,*/ url("../assets/11.jpg");
+    background: /*linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%,*/ url("../../../assets/11.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -256,7 +255,7 @@
 .signup-section {
     padding: 10rem 0;
     /*background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../../../assets/18.jpg");*/
-    background: /*linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%),*/ url("../assets/18.jpg");
+    background: /*linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%),*/ url("../../../assets/18.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -356,4 +355,7 @@ a:hover {
 
 footer {
     padding: 5rem 0;
+}
+td{
+    font-weight: bolder;
 }

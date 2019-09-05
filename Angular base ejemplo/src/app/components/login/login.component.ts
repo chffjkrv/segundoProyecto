@@ -34,13 +34,12 @@ export class LoginComponent implements OnInit {
           alert('Usuario existe');
           window.localStorage.setItem('usuarioId',this.formulario.value.id);
           this.router.navigate(['/listado']);
+      }, 
+      
+      error => {
 
-        
-
-
-      }, error => {
         this.router.navigate(['/add'])
-
+    
       });
   }
 

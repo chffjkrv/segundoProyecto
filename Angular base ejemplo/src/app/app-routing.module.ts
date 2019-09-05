@@ -5,12 +5,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './components/user/user.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
+import { ListarUsersComponent } from './components/listar-users/listar-users.component';
+import { ListarcontactosComponent } from './components/listarcontactos/listarcontactos.component';
+import { ListardescartesComponent } from './components/listardescartes/listardescartes.component';
 
 //Creo las rutas
 const routes: Routes = [
   { path: 'users', component: UserComponent },
   { path: 'add', component: AddUserComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'listado', component: ListarUsersComponent },
+  { path: 'listarcontactos',component:ListarcontactosComponent},
+ { path: 'listardescartes',component:ListardescartesComponent}
 ];
 
 //Todo esto ya estaba al ppio

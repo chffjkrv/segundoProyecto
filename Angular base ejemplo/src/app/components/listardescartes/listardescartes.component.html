@@ -1,0 +1,25 @@
+<div class="Listadofondo ">
+    <br/> <br/> <br/> <br/>
+  <table class="table table-striped">
+    
+    <thead>
+    
+      <tr>
+      <th class="hidden"></th>
+      <th>Nombre</th>
+      <th>Genero</th>
+      <th>Edad</th>
+      <th>Descripcion</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td><img src="http://placeimg.com/200/200/people" alt=""></td>
+      <td>{{user.nombre}}</td>
+      <td>{{user.genero}}</td>
+      <td>{{user.edad}}</td>
+      <td>{{user.descripcion}}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
